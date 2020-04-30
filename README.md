@@ -4,9 +4,9 @@ React projelerimizi geliştirirken bileşenlerimizi Javascript ile yazıyoruz. A
 
 NOT: Bu dersin esin kaynağı [React Dersleri YouTube kanalında](https://www.youtube.com/channel/UCfSw9Jm29lJHRKU4DmfH0vg/) sorulan sorular ve Kent C. Dodds'un [blog yazısı](https://kentcdodds.com/blog/javascript-to-know-for-react). Yazının [Türkçe çevirisini](https://medium.com/@ismailsimsek/react-i%C3%A7in-bilinmesi-gereken-javascript-14a6ef62bd72) yapan İsmail Şimşek'e ayrıca teşekkürler.
 
-## Template Literals (şablon dizisi)
+## Template Literals (şablon dizileri)
 
-💡 Bir javascript ifadesini ve düz yazıyı tek bir satırda yazmamızı sağlayan string çeşidi olarak tanımlanabilir. Template literals, back tick dediğimiz tırnak işaretleriyle yazılır. (Tab'ın üzerindeki, ESC'nin altındaki düğme)
+💡 Bir Javascript ifadesini düz bir yazı yazar gibi tek bir satırda yazmamızı sağlayan string çeşidi olarak tanımlanabilir. Template literals, back tick dediğimiz tırnak işaretleri içinde yazılmalıdır (Tab'ın üzerindeki, ESC'nin altındaki düğme.)
 
 ```javascript
 const isim = "Mehmet";
@@ -26,7 +26,7 @@ const toplam_tutar = `Toplam: ${birim_fiyat * adet} ${para_birimi}`; // Toplam: 
 
 ## Shorthand Property Names (kısayol obje anahtarı isimleri)
 
-💡 Javascript objesi, key-value (anahtar-değer) sistemiyle çalışan bir veri tipidir. Bir obje oluştururken, objenin değeri bir değişkenden geliyorsa, anahtarın açıkça belirtilmesine gerek yoktur. Değişkenin direk olarak objeye girilmesi, değişkenin ismini anahtar olarak, değerini ise değer olarak atar.
+💡 Javascript objesi, key-value (anahtar-değer) sistemiyle çalışan bir veri tipidir. Bir obje oluştururken, değer bir değişkenden geliyorsa, anahtarın açıkça belirtilmesine gerek yoktur. Değişkenin direk olarak objeye girilmesi, değişkenin ismini anahtar olarak, değerini ise değer olarak atar.
 
 ```javascript
 const isim = "Mehmet";
@@ -41,14 +41,14 @@ console.log(kullanici_objesi); // { isim: "Mehmet", yas: 35 }
 ```javascript
 function Sayac({ baslangicDegeri, adim }) {
   // Burada object destruction var.
-  const [sayac, setSayac] = useCounter({ baslangicDegeri, adim }); // Burada shorthand kullanım var.
+  const [sayac, setSayac] = useCounter({ baslangicDegeri, adim }); // Burada kısayol kullanım var.
   return <button onClick={setSayac}>{sayac}</button>;
 }
 ```
 
 ## Arrow Functions (oklu fonksiyon ifadeleri)
 
-Oklu fonksiyon ifadeleri, Javascript'te fonksiyon oluşturmanın yeni yöntemlerinden bir tanesidir. En önemli ve sık kullanılan özelliklerinden bir tanesi implicit (üstü kapalı) return özelliğidir. Dikkat edilmesi gereken bir başka farklılık ise, oklu fonksiyon ifadeleri hoist edilmezler, yani bir değişkene atadığınız oklu fonksiyonları, function ifadesiyle oluşturduğunuz fonksiyonlar gibi, oluşturmadan önce çağıramazsınız.
+Oklu fonksiyon ifadeleri, Javascript'te fonksiyon oluşturmanın yeni bir yöntemidir. En önemli ve sık kullanılan özelliklerinden bir tanesi implicit (üstü kapalı) return özelliğidir. Dikkat edilmesi gereken bir başka farklılık ise, oklu fonksiyon ifadeleri hoist edilmezler, yani bir değişkene atadığınız oklu fonksiyonları, function ifadesiyle oluşturduğunuz fonksiyonlar gibi, oluşturmadan önce çağıramazsınız.
 
 💡 Normal bir fonksiyon şöyle yazılır:
 
@@ -76,7 +76,7 @@ const topla = (sayi1, sayi2) => {
 const topla = (sayi1, sayi2) => sayi1 + sayi2;
 ```
 
-## Object/Array Destructuring (Obje/Dizilerin parçalarına bölünüp değişkenlere atanması) {#destructuring}
+## <a id="destructuring"></a>Object/Array Destructuring (obje/dizilerin parçalarına bölünüp değişkenlere atanması)
 
 💡 Objelerde destructring yaparken obje anahtarları ile değişkenin ismi aynı olmak zorundadır.
 
@@ -84,17 +84,20 @@ const topla = (sayi1, sayi2) => sayi1 + sayi2;
 const kullanici = { isim: "Mehmet", yas: 35 };
 
 const { isim, yas } = kullanici; // Burada isim ve yas ismiyle iki değişken oluşturduk.
+// Bu işlem, aşağıdaki iki işlemle aynıdır.
+// const isim = kullanici.isim;
+// const yas = kullanici.yas;
 
 console.log(isim); // "Mehmet"
 console.log(yas); // 35
 ```
 
-💡 Eğer sadece tek bir değere ihtiyacınız varsa, onu alıp diğerlerini tek bir değişkene obje olarak atayabilirsiniz.
+💡 Eğer sadece tek bir değere ihtiyacınız varsa, onu alıp diğerlerini tek bir değişkene obje olarak atayabilirsiniz. (Rest/Spread operatörüyle ilgili detaylı bilgi: [Rest/Spread Operator](#rest-spread))
 
 ```javascript
 const kullanici = { isim: "Mehmet", yas: 35, sehir: "İstanbul" };
 
-const { isim, ...kalanlar } = kullanici; // Burada isim'i aldık, diğer değerleri kalanlar değişkenine atadık. Spread operator (yayma operatörü, ...) geri kalan değerlerin toplanıp önüne geldiği değere atanmasını sağlar.
+const { isim, ...kalanlar } = kullanici; // (...) rest/spread operatörüdür.
 
 console.log(isim); // "Mehmet"
 console.log(kalanlar); // { yas: 35, sehir: "İstanbul" }
@@ -118,7 +121,7 @@ const [bir, iki, uc, dort, bes] = sayilar; // Burada 1,2,3,4,5 sayılarını bir
 console.log({ bir, iki, uc, dort, bes }); // { bir: 1, iki: 2, uc: 3, dort: 4, bes: 5 }
 ```
 
-💡 İlk veya son elemanı almak, geri kalanları tek bir diziye atamak isterseniz, objede olduğu gibi spread (yayma) operatörünü kullanabilirsiniz.
+💡 İlk elemanı bir değişkene atamak, geri kalanları tek bir diziye atamak isterseniz, objede olduğu gibi rest/spread (toparlama/yayma) operatörünü kullanabilirsiniz.
 
 ```javascript
 const sayilar = [1, 2, 3, 4, 5];
@@ -148,7 +151,18 @@ function topla(sayi1 = 0, sayi2 = 0) {
 }
 ```
 
-## Rest/Spread Operatör (toparlama/yayma operatörü)
+💡 Bir React örneği:
+
+```javascript
+const STATE_BASLANGICI = { yukleniyor: false, yazilar: [] };
+
+const reducer = (state = STATE_BASLANGICI, action) { // burada state değerine başlangıç olarak STATE_BASLANGICI değeri atadık.
+  // reducer detayları
+}
+
+```
+
+## <a id="rest-spread"></a>Rest/Spread Operator (toparlama/yayma operatörü)
 
 Bu operatör farklı durumlarda farklı anlamlara gelebilir. Toparlama özelliğine [Object/Array Destructuring](#destructuring) bölümünde değindik. Burada ise yayma özelliğine ve kullanım amaçlarına bakacağız.
 
@@ -211,7 +225,7 @@ const reducer = (state = INITIAL_STATE, action) {
 Modül sistemi sayesinde belirli kod blokları yeniden kullanmak ve organizasyon amaçlı import/export (içe/dışa aktarma) edilebilir. İki adet içe/dışa aktarma yöntemi vardır: named (isimli) ve default (varsayılan).
 
 - İsimli dışa aktarmada `export` ifadesi ardından dışa aktarılmak istenen Javascript ifadesi gelir.
-- Dışa aktarılan değişken, fonksiyon, obje, her neyse aynı isimle import edilmelidir.
+- Dışa aktarılan değişken, fonksiyon, obje, vs. aynı isimle import edilmelidir.
 - Bir dosyada birden fazla named export (isimli dışa aktarma) yer alabilir.
 
 ### Named Exports & Imports (isimli dışa/içe aktarmalar)
@@ -321,14 +335,14 @@ kopruAcikMi
      undefined
 
 ```javascript
-name ? `Merhaba, ${name}` : `Merhaba misafir`; // isim tanımlanmamışsa yahut boş ile Merhaba misafir döndürülecektir.
+name ? `Merhaba, ${name}` : `Merhaba misafir`; // isim tanımlanmamışsa yahut boş ise Merhaba misafir döndürülecektir.
 ```
 
 ## Array Methods (dizi metodları)
 
 `.find()` `.some()` `.every()` `.includes()` `.map()` `.filter()` `.reduce()`
 
-Dizi elemanlarını bir callback fonksiyonu yardımıyla tek tek gezip belirli kontroller yapabildiğimiz, Javascript'in yeni versiyonuyla hazır gelen metodlardır.
+Dizi elemanlarını bir callback fonksiyonu yardımıyla tek tek gezip belirli kontroller yapabildiğimiz, Javascript'in yeni versiyonuyla dizi prototipi olarak hazır gelen metodlardır.
 
 Şöyle bir örnek verimiz olsun.
 
@@ -355,7 +369,7 @@ Dizide en az bir elemanın, girilen koşulu sağlayıp sağlamadığıyla ilgili
 
 ```javascript
 urunler.some((urun) => urun.fiyat < 2); // false, dizide bir tane bile fiyatı 2'den düşük olan yok
-urunler.some((urun) => urun.fiyat > 9); // true, dizide en az bir tane fiyatı 10'dan büyük olan var
+urunler.some((urun) => urun.fiyat > 9); // true, dizide en az bir tane fiyatı 9'dan büyük olan var
 ```
 
 ### `.every()`
@@ -369,7 +383,7 @@ urunler.every((urun) => urun.fiyat < 10); // false, tüm ürün fiyatları 10'da
 
 ### `.includes()`
 
-Bir string içinde, verilen ifadenin olup olmadığını kontrol eder, küçük/büyük duyarlıdır.
+Bir string içinde, verilen ifadenin olup olmadığını kontrol eder, küçük/büyük harf duyarlıdır.
 
 ```javascript
 urunler.some((urun) => urun.name.includes("Kalem")); // true, bazı ürün isimleri Kalem içeriyor
@@ -446,7 +460,7 @@ urunler.reduce(
 
 `Promise` sonucu olumlu veya olumsuz gelecekte belli olacak bir işlemi ifade eder, bir kaynağa bağlanıp veri almak gibi. Kaynağa bağlanıp verinin alınması ne kadar süreceği bilinmediği için bu tarz işlemler Promise olarak oluşturulur. Bu işlemlere Javascript'te asynchronous operations (eş zamanlı olmayan işlemler) denir.
 
-Birçok Promise ya da async/await anlatan blog yazısı, `setTimeout` kullanarak birkaç saniyelik gecikme oluşturarak bu işlemi anlatmaya çalışır. Ancak ben şahsen bu yöntemi, anlaşılması normal bir API sorgusundan daha zor buluyorum. `setTimeout` örneğiyle görmek isterseniz, yazı sonunda bağlantısını verdiğim iki makaleyi inceleyebilirsiniz.
+Birçok Promise ya da async/await anlatan blog yazısı, bu eşzamanlılık konseptini `setTimeout` kullanıp birkaç saniyelik bir gecikme oluşturarak anlatmaya çalışır. Ancak ben şahsen bu yöntemin anlaşılmasını, normal bir API sorgusundan daha zor buluyorum. `setTimeout` örneğiyle görmek isterseniz, yazı sonunda bağlantısını verdiğim iki makaleyi inceleyebilirsiniz.
 
 Şimdi uzaktaki bir bağlantıya gidip bir veriyi getirmek üzere bir Promise oluşturalım.
 
@@ -454,7 +468,7 @@ Birçok Promise ya da async/await anlatan blog yazısı, `setTimeout` kullanarak
 const veriGetir = new Promise(icraMemuru);
 ```
 
-Şimdi bu kod bloğunu açıklayalım. `veriGetir` değişkenine yeni bir Promise atadık. Bu Promise `icraMemuru` ismiyle bir callback fonksiyonu alır.
+Şimdi bu kod bloğunu açıklayalım. Yeni bir Promise oluşturup `veriGetir` değişkenine atadık. Bu Promise `icraMemuru` olarak tanımlanabilecek bir callback fonksiyonu alır.
 
 ```javascript
 const veriGetir = new Promise((basarili, basarisiz) => {
@@ -469,7 +483,7 @@ const veriGetir = new Promise((basarili, basarisiz) => {
 
 `icraMemuru` fonksiyonu iki parametre alır. Bunlar `basarili` (resolved) veya `basarisiz` (rejected) fonksiyonlarıdır. Dolayısıyla `icraMemuru`'nun aldığı görev ya başarılı olacaktır, yada başarısız. Veri getirme işlemi başarılı olmuşsa, `basarili(veri)` şeklinde döndürülür. Başarısızlık durumunda ise `basarisiz("hata mesaji")` şeklinde bir hata döndürülür.
 
-Şimdi `veriGetir` bir Promise olduğuna göre `.then()` ve `.catch()` metodlarını zincirleme ekleyerek olumlu veya olumsuz gelen değeri yeni bir değişkene atayabiliriz.
+Şimdi `veriGetir` bir Promise olduğu için, buradan gelen veriyi yakalamak için `.then()` ve `.catch()` metodlarını zincirleme ekleyerek olumlu veya olumsuz gelen değeri yeni bir değişkene atarız.
 
 ```javascript
 const veri = veriGetir
@@ -485,10 +499,10 @@ const veri = veriGetir
 const veri = await veriGetir;
 ```
 
-💡 `await` kelimesini kullanacağınız fonksiyon `async` olarak işaretlenmelidir.
+💡 `await` kelimesini bir fonksiyon içinde kullanacağınız zaman, bu fonksiyon `async` olarak işaretlenmelidir.
 
 ```javascript
- function veriDondur() {
+async function veriDondur() {
   const veri = await veriGetir;
   return veri;
 }
