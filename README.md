@@ -31,7 +31,7 @@ const toplam_tutar = `Toplam: ${birim_fiyat * adet} ${para_birimi}`; // Toplam: 
 ```javascript
 const isim = "Mehmet";
 const yas = 35;
-kullanici_objesi = { isim, yas }; // { isim: isim, yas: yas } ile aynıdır
+const kullanici_objesi = { isim, yas }; // { isim: isim, yas: yas } ile aynıdır
 
 console.log(kullanici_objesi); // { isim: "Mehmet", yas: 35 }
 ```
