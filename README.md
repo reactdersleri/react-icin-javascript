@@ -136,9 +136,9 @@ console.log({ bir, kalanlar }); // {bir: 1, kalanlar: [2,3,4,5] }
 const [...ilkler, bes] = sayilar; // Uncaught SyntaxError: Rest element must be last element
 ```
 
-## Parameter Defaults (varsayılan değişken değerleri)
+## Parameter Defaults (varsayılan parametreler değerleri)
 
-💡 Bir fonksiyonun aldığı parametreler (değişkenler) için varsayılan değerler girilebilir. Eğer fonksiyon çağırıldığında bu değerler girilmezse, varsayılan değerler hesaba katılır.
+💡 Bir fonksiyonun aldığı parametreler için varsayılan değerler girilebilir. Eğer fonksiyon çağırıldığında bu değerler girilmezse, varsayılan değerler hesaba katılır.
 
 ```javascript
 topla(3, 5); // 8 döndürür
@@ -146,7 +146,7 @@ topla(3); // 3 döndürür
 topla(); // 0 döndürür
 
 function topla(sayi1 = 0, sayi2 = 0) {
-  // Burada eğer fonksiyon değişkenleri girilmezse varsayılan olarak 0 değerini tanımladık.
+  // Burada eğer fonksiyon parametreleri girilmezse varsayılan olarak 0 değerini tanımladık.
   return sayi1 + sayi2;
 }
 ```
@@ -156,10 +156,11 @@ function topla(sayi1 = 0, sayi2 = 0) {
 ```javascript
 const STATE_BASLANGICI = { yukleniyor: false, yazilar: [] };
 
-const reducer = (state = STATE_BASLANGICI, action) { // burada state değerine başlangıç olarak STATE_BASLANGICI değeri atadık.
+const reducer = (state = STATE_BASLANGICI, action) => {
+  // burada state değerine başlangıç olarak STATE_BASLANGICI değeri atadık.
   // reducer detayları
-}
-
+  return state;
+};
 ```
 
 ## <a id="rest-spread"></a>Rest/Spread Operator (toparlama/yayma operatörü)
@@ -202,18 +203,19 @@ Dikkat ederseniz obje içinde iki tane `sehir` değeri oldu. Objelerin aynı isi
 
 ```javascript
 INITIAL_STATE = {
-    yukleniyor: false,
-    hataMesaji: "";
-    arabalar: ["Mercedes", "BMW", "Audi"];
+  yukleniyor: false,
+  hataMesaji: "",
+  arabalar: ["Mercedes", "BMW", "Audi"],
 };
 
-const reducer = (state = INITIAL_STATE, action) {
-    switch(action.type) {
-        case "ARABA_EKLE":
-            return { ...state, arabalar: [...state.arabalar, action.payload] }
-        default: return state;
-    }
-}
+const reducer = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case "ARABA_EKLE":
+      return { ...state, arabalar: [...state.arabalar, action.payload] };
+    default:
+      return state;
+  }
+};
 ```
 
 Şimdi `return { ...state, arabalar: [...state.arabalar, action.payload] }` kısmında ne yaptığımızı anlatalım.
