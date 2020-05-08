@@ -501,7 +501,7 @@ const veri = veriGetir
 const veri = await veriGetir;
 ```
 
-💡 `await` kelimesini bir fonksiyon içinde kullanacağınız zaman, bu fonksiyon `async` olarak işaretlenmelidir.
+💡 `await` kelimesinin kullanıldığı fonksiyon `async` olarak işaretlenmelidir.
 
 ```javascript
 async function veriDondur() {
