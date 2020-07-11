@@ -75,6 +75,13 @@ const topla = (sayi1, sayi2) => {
 ```javascript
 const topla = (sayi1, sayi2) => sayi1 + sayi2;
 ```
+💡 Fonksiyon tek bir parametre alıyorsa eğer parantezleri de kullanmamıza gerek yok.
+```javascript
+const kare = a => a * a;
+console.log(kare(2)); //4
+```
+
+
 
 ## <a id="destructuring"></a>Object/Array Destructuring (obje/dizilerin parçalarına bölünüp değişkenlere atanması)
 
