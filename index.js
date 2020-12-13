@@ -1,1 +1,2 @@
 //selam
+console.log("Hi");
