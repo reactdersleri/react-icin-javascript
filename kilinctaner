@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Taner Kılınç</title>
+  </head>
+  <body>
+    <div class="hero" id="hero">
+      <nav>
+        <h2 class="logo">Portfo<span>lio</span></h2>
+
+        <ul class="navbar">
+          <li><a href="#hero">Anasayfa</a></li>
+          <li><a href="#about">Hakkımızda</a></li>
+          <li><a href="#service">Hizmetler</a></li>
+          <li><a href="#contact-me">Yetenekler</a></li>
+          <li><a href="#footer">Bize Ulaşın</a></li>
+          <div class="closemenu"><i class="fa fa-times"></i></div>
+        </ul>
+        <a href="https://www.youtube.com/channel/UC8ymFBYMQ9Jva4Xm9MGmRdA" class="btn" target="_blank">Abone Ol</a>
+        <div class="openmenu">
+          <i class="fa-sharp fa-solid fa-bars" id="ikon"></i>
+        </div>
+      </nav>
+
+      <div class="content" id="content">
+        <h4>Merhaba benim adım</h4>
+        <h1>TANER <span>KILINÇ</span></h1>
+        <h3>Ben bir Web Geliştiricisiyim</h3>
+        <div class="newslaatter">
+          <form>
+            <input
+              type="email"
+              name="email"
+              id="mail"
+              placeholder="enter Your Email"
+            />
+            <input type="submit" name="submit" value="Lets Start" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--About section start-->
+    <section class="about" id="about">
+      <div class="main">
+        <img src="Untitled-1.jpg" alt="" />
+        <div class="about-text">
+          <h2>Hakkımızda</h2>
+          <h5>Geliştirici <span>& Tasarımcı</span></h5>
+          <p>
+            Merhaba ben Taner Kılınç 21 yaşındayım 
+            mardin nüfusuna kayıtlıyım şuan Kırşehir 
+            Ahi Evran Ünüversitesi Web Tasarım ve Kodlama 
+            bölümünü okuyorum istediginiz her turlü web sitesi
+            tasarlayabilirim bir web sitesine ihtiyacınız
+             varsa benle iletişime geçebilirsiniz.
+          </p>
+          <button type="button" > İletişime Geç</button>
+        </div>
+      </div>
+    </section>
+
+    <!--service section start-->
+    <div class="service" id="service">
+      <div class="title">
+        <h2>Hizmetlerimiz</h2>
+      </div>
+
+      <div class="card-box">
+        <div class="card">
+          <i class="fas fa-bars"></i>
+          <h5>Web Yazılımcı</h5>
+          <div class="pra">
+            <p>
+              Bir veb site için gerkli tum yazılım teknigine sahibim,
+              backend ve frodend tasarlayabiliyorum.
+            </p>
+            <p style="text-align: center">
+              <a href="#" class="button">Read More</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <i class="fas fa-user"></i>
+          <h5>Web Geliştirici</h5>
+          <div class="pra">
+            <p>
+              İster yeni bir web site olsun ister eski bir web site olsun 
+              isteginize uygun yeni ozelikler yukliyebilirim.
+            </p>
+            <p style="text-align: center">
+              <a href="#" class="button">Read More</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <i class="fas fa-bell"></i>
+          <h5>Web Tasarımcı</h5>
+          <div class="pra">
+            <p>
+              Her musterimizin göz zevkine ve kurumlara  uygun web site
+              tasarlıyoruz. 
+            </p>
+            <p style="text-align: center">
+              <a href="#" class="button">Read More</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Contact Me-->
+    <div class="contact-me" id="contact-me">
+      <p>Size Güzel Bir Web Sitesi Yaptıralım.</p>
+      <a class="button-two" href="https://wa.me/905312570209" rel="nofollow" target="_blank">Bana Ulaşın</a>
+
+    </div>
+
+    <!--footer start-->
+    <footer id="footer">
+      <p>Taner Kılınç</p>
+      <p>
+        For more HTML, CSS, and coding tutorial - please click on the link below
+        to subscribe to my channel:
+      </p>
+      <div class="social">
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/taner_kln/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="@#0924" target="_blank"><i class="fa-brands fa-discord"></i></a>
+      </div>
+      <p class="end">&copy;CopyRight By Taner Kılınç</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+const nevbar = document.querySelector(".navbar");
+const openmenu = document.querySelector(".openmenu");
+const closemenu = document.querySelector(".closemenu");
+
+openmenu.addEventListener("click", show);
+closemenu.addEventListener("click", close);
+
+function show() {
+  nevbar.style.display = "flex";
+  nevbar.style.top = "250px";
+}
+function close() {
+  nevbar.style.top = "-200px";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+body {
+  width: 100%;
+}
+body > * {
+  width: 100%;
+}
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: url(web-tasarim-kodlama.jpg);
+  background-size: cover;
+  background-position: center;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 45px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+.logo {
+  color: rgb(255, 0, 0);
+  font-size: 35px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+span {
+  color: #0041f6;
+}
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 25px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+nav ul li a:hover {
+  color: #ff0000;
+  transition: 0.4s;
+}
+.btn {
+  background-color: #f9004d;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: transform 0.4s;
+}
+.btn:hover {
+  transform: scale(1.2);
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+}
+h1 {
+  color: white;
+  margin: 20px 0 20px;
+  font-size: 75px;
+}
+h3 {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+h4 {
+  color: #fcfc;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+.newslaatter form {
+  width: 380px;
+  max-width: 100%;
+  position: relative;
+}
+.newslaatter form input:first-child {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 130px 14px 15px;
+  border: 2px solid #f9004d;
+  outline: none;
+  border-radius: 30px;
+}
+.newslaatter form input:last-child {
+  position: absolute;
+  display: inline-block;
+  outline: none;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 30px;
+  background-color: #f9004d;
+  color: white;
+  box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+  top: 6px;
+  right: 6px;
+}
+.about {
+  width: 100%;
+  padding: 100px 0px;
+  background-color: #191919;
+}
+.about img {
+  height: auto;
+  width: 430px;
+}
+.about-text {
+  width: 550px;
+}
+.main {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.about-text h2 {
+  color: white;
+  font-size: 75px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.about-text h5 {
+  color: white;
+  letter-spacing: 2px;
+  font-size: 22px;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+.about-text p {
+  color: #fcfcfc;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 18px;
+  margin-bottom: 45px;
+}
+button {
+  background-color: #f9004d;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 13px 30px;
+  border-radius: 30px;
+  transition: 0.4s;
+}
+button:hover {
+  background-color: transparent;
+  border: 2px solid #f9004d;
+  cursor: pointer;
+}
+.service {
+  background: #101010;
+  width: 100%;
+  padding: 100px 0px;
+}
+.title h2 {
+  color: white;
+  font-size: 75px;
+  margin: 30px auto;
+  text-align: center;
+}
+.card-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+.card {
+  height: 365px;
+  width: 335px;
+  padding: 20px 35px;
+  background: #191919;
+  border-radius: 20px;
+  margin: 15px;
+  position: relative;
+  text-align: center;
+}
+.card i {
+  font-size: 50px;
+  display: block;
+  text-align: center;
+  margin: 25px 0px;
+  color: #f9004d;
+}
+h5 {
+  color: white;
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+.pra p {
+  color: #fcfc;
+  font-size: 16px;
+  line-height: 27px;
+  margin-bottom: 25px;
+}
+.card .button {
+  background-color: #f9004d;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 9px 30px;
+  border-radius: 30px;
+  transition: 0.4s;
+}
+.card .button:hover {
+  background-color: transparent;
+  border: 2px solid #f9004d;
+  cursor: pointer;
+}
+.contact-me {
+  width: 100%;
+  height: 290px;
+  background: #191919;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-me p {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.contact-me .button-two {
+  background-color: #f9004d;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 13px 30px;
+  border-radius: 30px;
+  transition: 0.4s;
+}
+.contact-me .button-two:hover {
+  background-color: transparent;
+  border: 2px solid #f9004d;
+  cursor: pointer;
+}
+footer {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: #101010;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer p:nth-child(1) {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+footer p:nth-child(2) {
+  color: white;
+  font-size: 17px;
+  width: 500px;
+  text-align: center;
+  line-height: 26px;
+}
+.social {
+  display: flex;
+}
+.social a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9004d;
+  border-radius: 50%;
+  margin: 22px 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+.social a:hover {
+  transform: scale(1.3);
+  transition: 0.3s;
+}
+.end {
+  position: absolute;
+  color: #f9004d;
+  bottom: 35px;
+  font-size: 14px;
+}
+.openmenu {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+  color: rgb(0, 0, 0);
+}
+.closemenu {
+  margin-top: 0px;
+  position: absolute;
+  margin-left: 95%;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+  color: rgb(0, 0, 0);
+}
+@media screen and (max-width: 1150px) {
+  .navbar a {
+    font-size: 0.8rem;
+  }
+  .navbar li {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .about img {display: none;}
+  .card-box { flex-direction: column; }
+  nav{
+    padding-top: 10px;
+      padding-left: 0%;
+      padding-right: 0%;
+  }
+  .content{left: 1%;}
+  .content h1{font-size: 40px;}
+  .content h4{font-size: 15px;}
+  .content h3 {font-size: 15px;
+    }
+  .btn:hover{transform: scale(1);}
+}
+
+@media screen and (max-width: 750px){
+    .openmenu { display:inline;}
+    .closemenu{display: inline;
+    color: #000;}
+
+    nav ul li a{
+      color: #000;
+    }
+
+
+    nav ul{flex-direction: column;
+    background-color: #fff;
+    width: 100%;    
+    text-align: center;
+    position: absolute;
+    margin-top: -250px;
+}
+
+}
+
+@media screen and (max-width: 545px){
+  .about-text{text-align: center;}
+    .about-text h2{font-size: 50px;}
+    .title h2{font-size: 50px;}
+    .contact-me p{font-size: 25px;}
+    footer p:nth-child(2){display: none;}
+}
+
+
+
